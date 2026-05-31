@@ -81,7 +81,6 @@ backdrop-filter: blur(10px);
 <img id="poster" style="margin-top:15px; width:200px; border-radius:10px;">
 
 <script>
-
 function pickMovie(){
 
 let genre = document.getElementById("genre").value;
@@ -112,27 +111,6 @@ poster = "https://upload.wikimedia.org/wikipedia/en/5/5f/Green_Book_%282018_film
 document.getElementById("result").innerHTML = result;
 document.getElementById("poster").src = poster;
 
-}
-let genre = document.getElementById("genre").value;
-let result = "";
-
-if(genre === "Komedia"){
-result = "🎭 'Jeden plus jeden' – zabawny film o przyjaźni.";
-}
-
-if(genre === "Akcja"){
-result = "💥 'John Wick' – dynamiczny film akcji.";
-}
-
-if(genre === "Science fiction"){
-result = "🚀 'Interstellar' – podróż przez kosmos i czas.";
-}
-
-if(genre === "Dramat"){
-result = "🎬 'Green Book' – poruszająca historia.";
-}
-
-document.getElementById("result").innerHTML = result;
 }
 </script>
 </div>
