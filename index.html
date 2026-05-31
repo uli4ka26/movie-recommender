@@ -7,7 +7,7 @@
 <style>
 body{
 font-family: Arial;
-background:#111;
+background: linear-gradient(135deg, #0f172a, #1e293b);
 color:white;
 text-align:center;
 padding:30px;
@@ -34,11 +34,21 @@ cursor:pointer;
 margin-top:30px;
 font-size:20px;
 }
+  .card{
+background: rgba(255,255,255,0.05);
+padding:20px;
+border-radius:20px;
+max-width:500px;
+margin:auto;
+box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+backdrop-filter: blur(10px);
+}
 </style>
+
 </head>
 
 <body>
-
+<div class="card">
 <h1>🎬 Co obejrzeć dziś?</h1>
 
 <p>Jak się dziś czujesz?</p>
@@ -94,6 +104,6 @@ result = "🎬 'Green Book' – poruszająca historia.";
 document.getElementById("result").innerHTML = result;
 }
 </script>
-
+</div>
 </body>
 </html>
