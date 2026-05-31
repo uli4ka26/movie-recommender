@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Co obejrzeć dziś?</title>
+
+<style>
+body{
+font-family: Arial;
+background:#111;
+color:white;
+text-align:center;
+padding:30px;
+}
+
+h1{
+color:#ffcc00;
+}
+
+select, button{
+padding:10px;
+margin:10px;
+border-radius:10px;
+border:none;
+font-size:16px;
+}
+
+button{
+background:#ffcc00;
+cursor:pointer;
+}
+
+#result{
+margin-top:30px;
+font-size:20px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>🎬 Co obejrzeć dziś?</h1>
+
+<p>Jak się dziś czujesz?</p>
+<select id="mood">
+<option>Radośnie</option>
+<option>Spokojnie</option>
+<option>Chcę akcji</option>
+<option>Chcę się zastanowić</option>
+</select>
+
+<p>Ile masz czasu?</p>
+<select id="time">
+<option>Do 2 godzin</option>
+<option>Ponad 2 godziny</option>
+</select>
+
+<p>Jaki gatunek filmu?</p>
+<select id="genre">
+<option>Komedia</option>
+<option>Akcja</option>
+<option>Science fiction</option>
+<option>Dramat</option>
+</select>
+
+<br>
+
+<button onclick="pickMovie()">Zaproponuj film</button>
+
+<div id="result"></div>
+
+<script>
+function pickMovie(){
+
+let genre = document.getElementById("genre").value;
+let result = "";
+
+if(genre === "Komedia"){
+result = "🎭 'Jeden plus jeden' – zabawny film o przyjaźni.";
+}
+
+if(genre === "Akcja"){
+result = "💥 'John Wick' – dynamiczny film akcji.";
+}
+
+if(genre === "Science fiction"){
+result = "🚀 'Interstellar' – podróż przez kosmos i czas.";
+}
+
+if(genre === "Dramat"){
+result = "🎬 'Green Book' – poruszająca historia.";
+}
+
+document.getElementById("result").innerHTML = result;
+}
+</script>
+
+</body>
+</html>
