@@ -78,10 +78,41 @@ backdrop-filter: blur(10px);
 <button onclick="pickMovie()">Zaproponuj film</button>
 
 <div id="result"></div>
+<img id="poster" style="margin-top:15px; width:200px; border-radius:10px;">
 
 <script>
+
 function pickMovie(){
 
+let genre = document.getElementById("genre").value;
+
+let result = "";
+let poster = "";
+
+if(genre === "Komedia"){
+result = "🎭 'Jeden plus jeden' – zabawny film o przyjaźni.";
+poster = "https://upload.wikimedia.org/wikipedia/en/3/3e/The_Intouchables_poster.jpg";
+}
+
+if(genre === "Akcja"){
+result = "💥 'John Wick' – dynamiczny film akcji.";
+poster = "https://upload.wikimedia.org/wikipedia/en/9/98/John_Wick_TeaserPoster.jpg";
+}
+
+if(genre === "Science fiction"){
+result = "🚀 'Interstellar' – podróż przez kosmos i czas.";
+poster = "https://upload.wikimedia.org/wikipedia/en/b/bc/Interstellar_film_poster.jpg";
+}
+
+if(genre === "Dramat"){
+result = "🎬 'Green Book' – poruszająca historia.";
+poster = "https://upload.wikimedia.org/wikipedia/en/5/5f/Green_Book_%282018_film%29.png";
+}
+
+document.getElementById("result").innerHTML = result;
+document.getElementById("poster").src = poster;
+
+}
 let genre = document.getElementById("genre").value;
 let result = "";
 
